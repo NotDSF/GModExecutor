@@ -9,17 +9,6 @@
 
 #pragma comment(lib, "detours.lib")
 
-void CreateConsole()
-{
-    AllocConsole();
-    freopen_s((FILE**)stdout, "CONOUT$", "w", stdout);
-    freopen_s((FILE**)stdin, "CONIN$", "r", stdin);
-    freopen_s((FILE**)stderr, "CONOUT$", "w", stderr);
-    std::cout.clear();
-    std::cin.clear();
-    std::cerr.clear();
-}
-
 typedef int(__cdecl* tLuaL_loadbufferx)(
     void* L, const char* buff, size_t sz, const char* name, const char* mode);
 
