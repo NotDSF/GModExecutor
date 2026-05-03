@@ -3,9 +3,6 @@
 #include "detours.h"
 #include <windows.h>
 #include <iostream>
-#include <winsock2.h>
-#include <ws2tcpip.h>
-#include <winuser.h>
 
 #pragma comment(lib, "detours.lib")
 
