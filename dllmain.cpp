@@ -104,7 +104,7 @@ void HookLuaL_loadbufferx(uintptr_t LuaShared)
     DetourTransactionCommit();
 }
 
-DWORD WINAPI maisn(LPVOID lpParam) 
+DWORD WINAPI main(LPVOID lpParam) 
 {
     auto LuaShared = GetModuleHandleA("lua_shared.dll");
 
@@ -145,7 +145,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
-        CreateThread(nullptr, 0, maisn, nullptr, 0, nullptr);
+        CreateThread(nullptr, 0, main, nullptr, 0, nullptr);
         break;
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
