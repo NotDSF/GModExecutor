@@ -110,7 +110,7 @@ DWORD WINAPI main(LPVOID lpParam)
 
     HookLuaL_loadbufferx((uintptr_t)LuaShared);
 
-    HANDLE hPipe = CreateNamedPipeA("\\\\.\\pipe\\FuckLoveGMOD",
+    HANDLE hPipe = CreateNamedPipeA("\\\\.\\pipe\\GarrysModExecutor",
         PIPE_ACCESS_DUPLEX, PIPE_TYPE_BYTE | PIPE_WAIT,
         1, 1024, 1024, 0, NULL);
 
